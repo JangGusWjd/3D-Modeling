@@ -35,10 +35,8 @@
 
       vec4 NN = vec4(vNormal,0);
 
-      // Transform vertex normal into eye coordinates
       vec3 N = normalize( (modelViewMatrix*NN).xyz);
 
-      // Compute terms in the illumination equation
       vec4 ambient = ambientProduct;
 
         float Kd = max( dot(L, N), 0.0 );
@@ -73,9 +71,9 @@
   <button id="Z">Z축 회전</button>
   <button id="T">회전 정지</button>
 
-  <script type="text/javascript" src="../Common/webgl-utils.js"></script>
-  <script type="text/javascript" src="../Common/initShaders.js"></script>
-  <script type="text/javascript" src="../Common/MV.js"></script>
+  <script type="text/javascript" src="./Common/webgl-utils.js"></script>
+  <script type="text/javascript" src="./Common/initShaders.js"></script>
+  <script type="text/javascript" src="./Common/MV.js"></script>
   <script src="dog.js"></script>
   <body>
     <canvas id="canvas" width="800" height="850"> </canvas>
